@@ -54,10 +54,10 @@ transformations = "Original"   # Data transformation applied to target variables
 
 
 # ───────── 📁 Input Files ─────────
-excel_path = r"C:\Users\venky\Dropbox\GIST\Work\Projects\SWAT_GAT_Fusion\Results\TCW_OBS.xlsx"
+excel_path = r" "
 # Path to Excel file containing observed streamflow or water quality measurements
 
-swat_folder_path = r"D:\GIST\Projects\Fusion_WQ\TCW_data\SWAT file"
+swat_folder_path = r" "
 # Path to SWAT model directory containing watershed configuration and simulation outputs
 
 sim_name = "Default"
@@ -65,5 +65,5 @@ sim_name = "Default"
 
 
 # ───────── 💾 Output Directory ─────────
-project_root = r"C:\Users\venky\Dropbox\GIST\Work\Projects\SWAT_GAT_Fusion\Manuscript\Git_Hub\Check"
+project_root = r" "
 # Root directory where model outputs, results, and figures will be saved
