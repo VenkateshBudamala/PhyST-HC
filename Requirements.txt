@@ -1,0 +1,10 @@
+numpy
+pandas
+geopandas
+matplotlib
+tqdm
+torch
+torch-geometric
+scikit-learn
+hydroeval
+openpyxl
