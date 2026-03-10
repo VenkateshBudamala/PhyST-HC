@@ -9,13 +9,13 @@
 
 # 🚀 Overview
 
-**PhyST-HC (Physics-guided Hybrid Spatial–Temporal Framework)** is a hybrid deep learning framework developed for **event-scale prediction of streamflow and riverine carbon fluxes**.
+**PhyST-HC (Physics-guided Hybrid Spatial–Temporal Framework)** is a hybrid deep learning framework designed for **event-scale prediction of streamflow and riverine carbon fluxes**.
 
 The framework integrates:
 
 - 🌍 **Process-based hydrological simulations (SWAT)**
 - 🧠 **Spatial Graph Neural Networks (GCN)**
-- ⏳ **Temporal learning for dynamic hydrological processes**
+- ⏳ **Temporal learning for hydrological dynamics**
 
 to improve prediction of:
 
@@ -23,7 +23,7 @@ to improve prediction of:
 - **Dissolved Organic Carbon (DOC)**
 - **Particulate Organic Carbon (POC)**
 
-This hybrid framework combines **physical process understanding and data-driven learning** to improve prediction accuracy across hydrological events.
+This hybrid framework combines **physical process knowledge and data-driven learning** to improve predictive skill in hydrological systems.
 
 ---
 
@@ -52,11 +52,11 @@ PhyST-HC
 | File | Description |
 |-----|-------------|
 | `Inputs.py` | Model configuration, experiment parameters, and data paths |
-| `Main_Module.py` | Core PhyST-HC model architecture |
-| `Run_Simulation.py` | Main training and testing pipeline |
-| `Functions_Q.py` | Streamflow prediction functions |
-| `Functions_DOC.py` | Dissolved Organic Carbon prediction functions |
-| `Functions_POC.py` | Particulate Organic Carbon prediction functions |
+| `Main_Module.py` | Core PhyST-HC architecture |
+| `Run_Simulation.py` | Main script that runs training and testing |
+| `Functions_Q.py` | Streamflow prediction module |
+| `Functions_DOC.py` | Dissolved Organic Carbon prediction module |
+| `Functions_POC.py` | Particulate Organic Carbon prediction module |
 
 ---
 
@@ -129,7 +129,7 @@ Each variable must be stored in **its corresponding sheet**.
 
 # Sheet Format
 
-Each sheet must follow the structure below:
+Each sheet should follow this structure:
 
 | Date | 1 | 2 | 3 | 4 | 5 |
 |-----|---|---|---|---|---|
@@ -138,14 +138,14 @@ Each sheet must follow the structure below:
 
 Where:
 
-- **First column must be `Date`**
+- The **first column must be `Date`**
 - Remaining columns represent **observed station numbers**
 
 ---
 
 # 🔗 Observed–Reach Mapping
 
-In `Inputs.py`, the mapping between **observed station columns and SWAT reach numbers** should be defined as:
+In `Inputs.py`, define the mapping between **observed station columns and SWAT reach numbers** as:
 
 ```python
 obs_to_reach_mapping = {
@@ -164,8 +164,8 @@ Where:
 Example:
 
 ```
-Observed column 1 → SWAT Reach 1
-Observed column 2 → SWAT Reach 2
+Observed column 1 → SWAT Reach 1  
+Observed column 2 → SWAT Reach 2  
 Observed column 3 → SWAT Reach 3
 ```
 
@@ -182,24 +182,24 @@ POC
 DOC
 ```
 
-- Observed station columns must match the numbers used in `obs_to_reach_mapping`.
+- Observed station columns must match the numbers defined in `obs_to_reach_mapping`.
 - Missing values should be represented as **NaN or empty cells**.
 
 ---
 
 # 📦 Requirements
 
-The framework uses the following Python libraries:
+The framework requires the following Python libraries:
 
-- torch  
-- torch-geometric  
 - numpy  
 - pandas  
-- scikit-learn  
-- hydroeval  
 - geopandas  
 - matplotlib  
 - tqdm  
+- torch  
+- torch-geometric  
+- scikit-learn  
+- hydroeval  
 - openpyxl  
 
 Install them using:
